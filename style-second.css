@@ -1,0 +1,959 @@
+/* ВТОРАЯ СТРАНИЦА */
+html, body {
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+#page2 {
+	background: #fbf6ec;
+	overflow-y: auto;
+	overflow-x: hidden !important;
+	width: 100%;
+	position: relative;
+	left: 0;
+	right: 0;
+}
+
+/* КВАДРАТНЫЙ КОРИЧНЕВЫЙ СКРОЛЛ */
+body::-webkit-scrollbar {
+	width: 8px;
+}
+body::-webkit-scrollbar-track {
+	background: transparent; /* прозрачный */
+	border-radius: 0; /* квадратный */
+}
+body::-webkit-scrollbar-thumb {
+	background: #422d1c; /* коричневый */
+	border-radius: 0 !important; /* убрать скругление */
+}
+
+/* КАРИЧНЕВЫЕ СВИТЧИ*/
+.rsvp-radio input,
+.rsvp-check input {
+	display: none;
+}
+
+.rsvp-radio span {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #4a2e1c;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+.rsvp-radio input:checked + span {
+    background: #4a2e1c;
+    /* Белая рамка на расстоянии 2px от границы */
+    box-shadow: 
+        inset 0 0 0 1px #4a2e1c, /* Коричневая "прокладка" */
+        inset 0 0 0 2px #fbf6ec; /* Белая внутренняя рамка */
+}
+
+.rsvp-check span {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #4a2e1c;
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.rsvp-check input:checked + span {
+    background: #4a2e1c;
+    /* Белая рамка на расстоянии 2px от границы */
+    box-shadow: 
+        inset 0 0 0 1px #4a2e1c, /* Коричневая "прокладка" */
+        inset 0 0 0 2px #fbf6ec; /* Белая внутренняя рамка */
+}
+
+/* БЛОК 1. НАЧАЛЬНОЕ ФОТО */
+.wedding-photo-block {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+.wedding-photo {
+	width: 500px;
+	max-width: 100%;
+	object-fit: cover;
+	display: block;
+	user-select: none;
+	-webkit-user-drag: none; /* запретить перетаскивание*/
+	margin-top: -158px;
+	/* Маска */
+	-webkit-mask-image: url("./assets/Фото 1 (маска).png");
+	mask-image: url("./assets/Фото 1 (маска).png");
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+
+/* СТРЕЛКА ВНИЗ (стиль) */
+.animated-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    width: 11px;
+    height: 12px;
+    animation: float 1.8s ease-in-out infinite;
+}
+/* СТРЕЛКА ВНИЗ (стиль svg) */
+.arrow-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* СТРЕЛКА ВНИЗ (анимация) */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(8px); 
+    }
+}
+
+/* ТЕКСТ НА ФОТО */
+.photo-title {
+	position: absolute;
+	top: 8%;
+	text-align: center;
+	width: 100%;
+	color: #fbf6ec;
+}
+.names {
+	font-family: 'MediumGaramon', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 38px;
+	margin-left: 32px;
+	color: #fbf6ec;
+	/*letter-spacing: 1px;
+	transform: scaleX(0.95);*/
+}
+.subtitle {
+	font-family: 'ExtralightCyrillic', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 48px;
+	margin-top: -35px;
+}
+.hand-writing {
+	font-family: 'ExtralightCyrillic', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 94px;
+	margin-top: -72px;
+}
+.hand-writing h2 {
+	font-family: 'ExtralightCyrillic', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 68px;
+	margin-top: -72px;
+	color: #fbf6ec;
+	margin-left: -24px;
+}
+
+/* ТЕКСТ ПОД ФОТО */
+.photo-text {
+	text-align: center;
+	color: #422d1c;
+}
+.white {
+	color: #fbf6ec;
+	opacity: 0.8;
+	font-size: 17px;
+}
+.photo-text h2 {
+	font-family: 'MediumGaramon', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 38px;
+}
+.photo-text p {
+	font-size: 18px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-align: center;
+	padding: 0px 20px;
+	color: #422d1c;
+	margin-top: -10px;
+}
+
+/* ТЕКСТ ПОД ФОТО (анимация)*/
+.photo-text2 p {
+	font-size: 18px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-align: center;
+	padding: 0px 20px;
+	color: #422d1c;
+	margin-top: -10px;
+	opacity: 0.3; /* Начальная прозрачность */
+	transform: scale(0.9); /* Начальный размер чуть меньше */
+	transition: all 1.8s ease; /* Плавный переход */
+}
+/* Класс для анимации при появлении в viewport */
+.photo-text2.animate p {
+	opacity: 1;				/* Полная непрозрачность */
+	transform: scale(1);	/* Нормальный размер */
+}
+
+.main-text {
+	font-family: 'MediumGaramon', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 36px;
+	color: #fbf6ec;
+	margin-top: -45px;
+}
+.small-text {
+	text-align: center;
+	padding: 40px 20px;
+	color: #fbf6ec;
+}
+/* БЛОК 2 */
+.text-block {
+	text-align: center;
+	/*padding: 5px;*/
+	color: #422d1c;
+}
+.dates-block {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto; /* по центру */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	font-family: sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+/* обычные даты */
+.date {
+	border: 1px solid #422d1c;
+	border-radius: 6px;
+	padding: 6px 10px;
+	text-align: center;
+	color: #422d1c;
+}
+.date.normal {
+	font-size: 16px;
+}
+.date.small {
+	font-size: 12px;
+	opacity: 0.5;
+	/*color: #b7aca0;*/
+}
+.heart {
+	width: 46px;
+	height: 46px;
+	background: #b59e7d;
+	clip-path: shape(from 50% 91%, line to 90% 50%, arc to 50% 9% of 1%, arc to 10% 50% of 1%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fbf6ec;
+	font-size: 18px;
+	font-weight: 500;
+	transform: translateY(2px);
+}
+.heart span {
+	transform: translateY(-4px); /* поднимаем цифру */
+	display: inline-block;
+}
+
+.wedding-photo-block3 {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+.wedding-photo-block3 img {
+    -webkit-touch-callout: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.overlay-del {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* БЛОК 3 */
+/* Общий отступ между блоками */
+.section {
+	margin-bottom: 50px;
+	text-align: center;
+}
+/* БЛОК 3. МЕСТО ПРОВЕДЕНИЯ */
+.place-card {
+	padding-top: 100px;
+	width: 500px;
+	max-width: 100%;
+	height: 550px;
+	/*background: #b2ac88;*/
+	/*padding: 30px 20px;
+    border-radius: 12px;*/
+	color: #fbf6ec;
+	text-align: center;
+	margin: 0 auto; /* Центрирование блока */
+	/* Маска */
+	-webkit-mask-image: url("./assets/Место проведения (маска).png");
+	mask-image: url("./assets/Место проведения (маска).png");
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	/*
+    -webkit-mask-position: center;
+    mask-position: center;*/
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+}
+.place-card-mask {
+	width: 500px;
+	max-width: 100%;
+	height: 500px;
+	background: #b59e7d;
+	color: #fbf6ec;
+	text-align: center;
+	margin: 0 auto; /* Центрирование блока */
+}
+.place-title {
+	font-size: 22px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+.place-inner {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.place-photo {
+	width: 240px;
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+	margin: 0 auto;
+	display: block; /* Важно для центрирования */
+}
+.place-address {
+	font-size: 16px;
+	margin-bottom: 15px;
+	line-height: 1.5;
+}
+.btn-map {
+	font-size: 12px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-align: center;
+	color: #fbf6ec;
+	opacity: 0.75;
+	letter-spacing: 1px;
+	margin-top: 5px;
+	background: transparent;
+	border: 1px solid #fbf6ec;
+	border-radius: 6px;
+	padding: 10px 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.btn-map:hover {
+	background: #fbf6ec;
+	color: #b59e7d;
+	opacity: 1.0;
+}
+.card {
+	max-width: 500px;
+	width: 100%;
+	height: 620px;
+	/*margin: 40px auto;*/
+	background: #b59e7d;
+	color: #fbf6ec;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	/*padding-top: 100px;*/
+	padding: 100px 30px 0;
+	margin: 0 auto;
+	/* Для стандартных браузеров */
+	mask-image:
+		url("./assets/Место проведения (маска) top.png"), linear-gradient(black 0 0), url("./assets/Место проведения (маска) bottom.png");
+	mask-repeat: no-repeat;
+	mask-position:
+		top center, center, bottom center;
+	mask-size:
+		100% 100px, 100% calc(100% - 200px), 100% 100px;
+	mask-composite: add;
+	/* Для WebKit */
+	-webkit-mask-image:
+		url("./assets/Место проведения (маска) top.png"), linear-gradient(black 0 0), url("./assets/Место проведения (маска) bottom.png");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position:
+		top center, center, bottom center;
+	-webkit-mask-size:
+		100% 100px, 100% calc(100% - 200px), 100% 100px;
+	-webkit-mask-composite: source-over, source-over;
+}
+/* БЛОК 4. ПРОГРАММА ДНЯ */
+.program-old {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	margin: 40px auto;
+}
+.program {
+	width: 100%;
+	max-width: 500px;
+	margin: 40px auto;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+.title {
+	text-align: center;
+	font-size: 32px;
+	color: #422d1c;
+	margin-bottom: 50px;
+}
+.item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 65px;
+	position: relative;
+}
+.item:last-child .timeline {
+	height: 0;
+}
+.icon {
+	width: 70px;
+	margin-right: 20px;
+	opacity: 0.9;
+}
+.timeline {
+	position: absolute;
+	left: 90px;
+	top: 30px;
+	bottom: 0;
+	height: calc(100% + 65px);
+	border-left: 3px solid #b59e7d;
+	width: 20px;
+	margin-right: 30px;
+}
+.timeline .dot {
+	position: absolute;
+	left: -10px;
+	width: 16px;
+	height: 16px;
+	background: #b59e7d;
+	border-radius: 50%;
+}
+.text {
+	margin-left: 30px; /* подбери значение */
+}
+.text .time {
+	font-size: 20px;
+	color: #422d1c;
+	margin-bottom: 10px;
+}
+.text .desc {
+	font-size: 16px;
+	color: #422d1c;
+	line-height: 1.4;
+}
+
+/* БЛОК 6. ДРЕСС-КОД */
+.dc-container {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 30px 0;
+}
+.dc-main-title {
+	font-size: 32px;
+	letter-spacing: 2px;
+	margin-bottom: 25px;
+	color: #4a2e1c;
+}
+.dc-description, .dc-text, .dc-footer {
+	font-size: 17px;
+	line-height: 1.5;
+	color: #4a2e1c;
+}
+.dc-script-title {
+	font-family: 'ExtralightCyrillic', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 68px;
+	margin: 35px 0 10px;
+	margin-left: -24px;
+	color: #422d1c;
+}
+.dc-color-row {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 30px;
+}
+.dc-color-circle {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	margin-left: -15px; /* перекрытие */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.dc-color-circle:first-child {
+	margin-left: 0;
+}
+.dc-footer {
+	margin-top: 30px;
+}
+
+/* БЛОК 7. СЛАЙДЕР*/
+.slider-container {
+	width: 100%;
+	max-width: 500px;
+	height: 670px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.slider {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+	object-fit: cover;
+	object-position: center;
+}
+.slide.active {
+	display: block;
+}
+
+/* СЛАЙДЕР СТРЕЛКИ*/
+.slider-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	color: #fbf6ec;
+	opacity: 0.7;
+	cursor: pointer;
+	user-select: none;
+	padding: 5px 10px;
+}
+.slider-arrow:hover {
+	color: white;
+}
+.slider-arrow.left {
+	left: 10px;
+}
+.slider-arrow.right {
+	right: 10px;
+}
+
+/* БЛОК 8. КОНТАКТНАЯ ИНФОРМАЦИЯ */
+.card-contact {
+	max-width: 500px;
+	width: 100%;
+	height: 500px;
+	/*margin: 40px auto;*/
+	background: #b59e7d;
+	color: #fbf6ec;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	/*padding-top: 100px;*/
+	padding: 120px 30px 0;
+	margin: 0 auto;
+
+	/* Для стандартных браузеров */
+	mask-image:
+		url("./assets/Место проведения (маска) top.png"), linear-gradient(black 0 0), url("./assets/Место проведения (маска) bottom.png");
+	mask-repeat: no-repeat;
+	mask-position:
+		top center, center, bottom center;
+	mask-size:
+		100% 100px, 100% calc(100% - 200px), 100% 100px;
+	mask-composite: add;
+	/* Для WebKit */
+	-webkit-mask-image:
+		url("./assets/Место проведения (маска) top.png"), linear-gradient(black 0 0), url("./assets/Место проведения (маска) bottom.png");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position:
+		top center, center, bottom center;
+	-webkit-mask-size:
+		100% 100px, 100% calc(100% - 200px), 100% 100px;
+	-webkit-mask-composite: source-over, source-over;
+}
+
+/* Картинки внутри */
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+	line-height: 0.4;
+}
+.contact-icon img {
+    width: 20px;
+    height: auto;
+}
+.photo-text a {
+    color: #fbf6ec;
+    text-decoration: none;
+}
+
+.photo-text a:hover {
+    color: #422d1c; /* при наведении */
+}
+/*
+.photo-text a:active {
+    color: #aaa; /* когда нажали
+}
+
+.photo-text a:visited {
+    color: #ccc; /* после перехода
+}
+*/
+/* БЛОК 9. ПРИСУТСТВИЕ */
+.rsvp {
+	padding: 0 5px;
+}
+
+.rsvp-container {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	
+	padding: 0px 20px;
+	/*background: #f8f1e7;*/
+	color: #4a3a2a;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+.rsvp-title {
+	text-align: center;
+}
+.rsvp-subtitle {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 30px;
+	line-height: 1.4;
+	font-weight: 300;
+}
+.rsvp-subtitle span {
+	font-weight: 400;
+}
+.rsvp-label {
+	display: block;
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+.rsvp-input {
+	width: 100%;
+	max-width: 500px;
+	
+	/* Изменяем прозрачные границы на видимые */
+	padding: 10px;
+	font-size: 18px;
+	background: none;
+	
+	/* Убираем transparent границы и делаем их видимыми */
+	border: 1px solid #4a3a2a;
+	border-radius: 4px; /* Добавляем небольшое скругление */
+	
+	outline: none;
+	margin-bottom: 25px;
+	color: #4a3a2a;
+	
+	box-sizing: border-box;
+	
+	/* Добавляем явный z-index и позиционирование */
+	position: relative;
+	z-index: 10;
+	
+	/* Убираем прозрачные границы */
+	/* border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent; */
+	
+	/* Добавляем фон для лучшей видимости */
+	/*background-color: rgba(255, 255, 255, 0.1);*/
+}
+
+/* Добавляем стили для фокуса поля */
+.rsvp-input:focus {
+	/*background-color: rgba(255, 255, 255, 0.2);*/
+	border-color: #4a3a2a;
+	outline: 2px solid rgba(74, 58, 42, 0.2);
+}
+
+/* Добавляем стили для placeholder */
+.rsvp-input::placeholder {
+	color: #4a3a2a;
+	opacity: 0.6;
+}
+.rsvp-block {
+	margin-bottom: 25px;
+}
+.rsvp-radio, .rsvp-check {
+	display: block;
+	font-size: 18px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	font-weight: 300;
+}
+.rsvp-radio input, .rsvp-check input {
+	margin-right: 8px;
+}
+.rsvp-btn {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	
+	font-size: 12px;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-align: center;
+	color: #fbf6ec;
+	/*opacity: 0.75;*/
+	letter-spacing: 1px;
+	margin-top: 15px;
+	background: #4a3a2a;
+	border: 1px solid #4a3a2a;
+	border-radius: 6px;
+	padding: 10px 25px;
+	cursor: pointer;
+	transition: all 0.3s ease;	
+}
+.rsvp-btn:hover {
+	background: transparent;
+	border: 1px solid #4a3a2a;
+	color: #4a3a2a;
+}
+
+/* БЛОК 10. ДО ВСТРЕЧИ ЧЕРЕЗ */
+.countdown-wrapper {
+    width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	
+    text-align: center;
+	
+	font-family: 'MediumGaramon', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	
+	font-size: 38px;
+	color: #422d1c;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+	
+	gap: 25px;
+}
+.cd-item {
+    min-width: 50px; /* Фиксированная ширина */
+    /*flex: none; /* Отключаем flex-grow */
+}
+.cd-item span {
+    font-size: 40px;
+    display: block;
+}
+.cd-label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+/* БЛОК 11. С ЛЮБОВЬЮ, АРТЁМ И СОФИЯ */
+.wedding-photo-block2 {
+    width: 100%;
+    max-width: 500px;
+    height: 670px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.wedding-photo2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    object-fit: cover;
+    object-position: center;
+    
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    
+    /* Создаем составную маску */
+    -webkit-mask-image: 
+        linear-gradient(to bottom, 
+            black 0%, 
+            black calc(100% - 100px),
+            transparent calc(100% - 100px),
+            transparent 100%),
+        url("./assets/Место проведения (маска) bottom.png");
+    
+    mask-image: 
+        linear-gradient(to bottom, 
+            black 0%, 
+            black calc(100% - 100px),
+            transparent calc(100% - 100px),
+            transparent 100%),
+        url("./assets/Место проведения (маска) bottom.png");
+    
+    /* Первая маска (градиент) - видимая часть, вторая - ваша PNG маска */
+    -webkit-mask-composite: source-over, source-over;
+    mask-composite: source-over, source-over;
+    
+    -webkit-mask-size: 
+        100% 100%,  /* Градиент на всю площадь */
+        100% 100px; /* PNG маска только 100px высотой */
+    
+    mask-size: 
+        100% 100%,
+        100% 100px;
+    
+    -webkit-mask-position: 
+        center center,
+        center bottom;
+    
+    mask-position: 
+        center center,
+        center bottom;
+    
+    -webkit-mask-repeat: 
+        no-repeat,
+        no-repeat;
+    
+    mask-repeat: 
+        no-repeat,
+        no-repeat;
+}
+
+.photo-title-bottom {
+	position: absolute;
+	bottom: 12%;
+	text-align: center;
+	width: 100%;
+	color: #fbf6ec;
+}
+
+.names-bottom {
+	font-family: 'MediumGaramon', Arial, sans-serif;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-size: 38px;
+	margin-left: 150px;
+	color: #fbf6ec;
+	margin-top: -10px;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 600px) {
+	/* Цвет ссылки */
+	a {
+		color: #fbf6ec;
+		text-decoration: none; /* убрать подчеркивание */
+	}
+	/* Цвет ссылки при наведении */
+	a:hover {
+		color: #422d1c;
+	}
+	.wedding-photo {
+		width: 100vw;
+		height: auto;
+		object-fit: cover;
+	}
+	.main-text {
+		font-size: 2.0rem;		/* Уменьшаем размер шрифта для мобильных */
+								/*word-break: break-word; /* Перенос длинных слов */
+	}
+	.btn-map {
+		width: 90%;
+		max-width: 200px;
+	}
+	.hand-writing h2 {
+		font-size: 58px;
+	}
+	/* Приглашение */
+	.rsvp-container {
+		width: 90%;
+		max-width: 500px;
+	}
+	/* Стрелка вниз*/
+	.animated-arrow {
+		bottom: 60px;	
+	}
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media (max-width: 360px) {
+	/* Контактная информация */
+	.main-text {
+		font-size: 1.8rem;
+	}
+	/* Место проведения */
+	.hand-writing h2 {
+		font-size: clamp(52px, 5vw, 58px);
+	}
+	/* Праздничный ужин */
+	.text .time {
+		font-size: clamp(14px, 4vw, 16px);
+	}
+	/* Праздничный ужин текст после */
+	.text .desc {
+		font-size: clamp(14px, 4vw, 16px);
+	}
+}

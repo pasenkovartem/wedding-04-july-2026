@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Артём &amp; София — Приглашение</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-second.css">
+<link rel="apple-touch-icon" type="image/png" href="./assets/icon.png">
+<link rel="icon" type="image/png" sizes="128x128" href="./assets/icon.png">
+</head>
+<body>
+
+<!-- Первая страница -->
+<div id="page1" class="page">
+	<div class="envelope-wrapper"> <img class="envelope-img" src="./assets/Начальная страница.png"> 
+		<!-- Конверт текст -->
+		<div class="text-overlay">
+			<div class="click-here" onclick="openPage()">Нажмите здесь</div>
+			<div class="bottom-text">
+				<div class="line-block"> <span class="label">От кого:</span> <span class="value">Артём и София</span>
+					<div class="underline"></div>
+				</div>
+				<div class="line-block"> <span class="label">Кому:</span> <span class="value">Близким и друзьям</span>
+					<div class="underline"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Вторая страница (скрыта по умолчанию) -->
+<div id="page2" class="page2-hidden">
+	<div class="page2-content">
+		<div class="wedding-photo-block"> <img src="./assets/Фото 1.png" class="wedding-photo">
+			<div class="photo-title">
+				<div class="names">АРТЁМ И СОФИЯ</div>
+				<div class="subtitle">У нас свадьба!</div>	
+			</div>
+
+			<div class="animated-arrow">
+				<svg viewBox="0 0 17 9" fill="none" class="arrow-svg">
+					<path d="M0.205859 0.208283C0.0929686 0.320689 0 0.42979 0 0.446319C0 0.466156 1.9125 2.38368 4.25 4.71116L8.5 8.94292L12.75 4.71116C15.0875 2.38368 17 0.466156 17 0.446319C17 0.42979 16.907 0.320689 16.7941 0.208283L16.585 0L12.5441 4.02349L8.5 8.05028L4.45586 4.02349L0.415039 0L0.205859 0.208283Z" 
+						  fill="#fbf6ec">
+					</path>
+				</svg>
+			</div>
+		</div>
+		
+		<div class="photo-text">
+			<h2>Дорогие и любимые!</h2>
+			<p>Приглашаем вас на нашу свадьбу,<br>которая состоится:</p>
+		</div>
+		<div class="text-block">
+			<div class="hand-writing">июль</div>
+		</div>
+		<div class="dates-block">
+			<div class="date small">2</div>
+			<div class="date normal">3</div>
+			<div class="heart"><span>4</span></div>
+			<div class="date normal">5</div>
+			<div class="date small">6</div>
+		</div>
+		<br>
+		<br>
+		<div class="photo-text2">
+			<p>Будем счастливы разделить<br>этот важный момент с вами!</p>
+		</div>
+		<br>
+				
+		<!-- БЛОК 3. МЕСТО ПРОВЕДЕНИЯ -->
+		<div class="card">
+			<div class="hand-writing"><h2>Место проведения</h2></div>
+			<div class="main-text">«ОТЕЛЬ МЕЧТА»</div><br>
+			<div class="place-inner">
+				<img src="./assets/Зал.png" class="place-photo">
+			</div>
+			<p class="photo-text white">Мы будем ждать вас по адресу:<br>Лесная улица 2, дп. Чернолучинский</p>
+			<p class="photo-text white">Для вашего удобства будет организован трансфер до места проведения и обратно. Точное время и место сбора мы сообщим дополнительно.</p>
+			<button class="btn-map" onclick="openYandexMap()">Посмотреть на карте</button>
+			
+			<div class="place-card-mask"></div>
+		</div>
+		
+		<br>
+		
+		<!-- БЛОК 4. ПРОГРАММА ДНЯ -->
+		<div class="program">
+			<div class="photo-text"><h2>ПРОГРАММА ДНЯ</h2></div>
+			<!-- Блок 16:30 -->
+			<div class="item">
+				<img src="./assets/img1.png" class="icon">
+				<div class="timeline">
+					<span class="dot"></span>
+				</div>
+				<div class="text">
+					<div class="time">16:30 Сбор гостей</div>
+					<div class="desc">Общаемся и проникаемся атмосферой праздника</div>
+				</div>
+			</div>
+			<!-- Блок 17:00 -->
+			<div class="item">
+				<img src="./assets/img2.png" class="icon">
+				<div class="timeline">
+					<span class="dot"></span>
+				</div>
+				<div class="text">
+					<div class="time">17:00 Церемония</div>
+					<div class="desc">Момент, когда мы скажем друг другу «Да»</div>
+				</div>
+			</div>
+			<!-- Блок 17:30 -->
+			<div class="item">
+				<img src="./assets/img3.png" class="icon">
+				<div class="timeline">
+					<span class="dot"></span>
+				</div>
+				<div class="text">
+					<div class="time">17:30 Праздничный ужин</div>
+					<div class="desc">Насладитесь этим вечером — он обещает быть незабываемым</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- БЛОК 5. ФОТО 2 -->
+		<div class="wedding-photo-block3"><img src="./assets/Фото 2.png" width="500px" height="100%"></div>
+		
+		<!-- БЛОК 6. ДРЕСС-КОД -->
+		<div class="dc-container">
+			
+			<div class="photo-text"><h2>ДРЕСС-КОД</h2></div>
+
+			<p class="dc-description">Пожалуйста, поддержите в своих образах стиль и палитру нашего торжества:</p>
+
+			<h2 class="dc-script-title">Девушки</h2>
+
+			<p class="dc-text">Просим вас избегать белого цвета,<br>в этот день он только для невесты</p>
+
+			<div class="dc-color-row">
+				<div class="dc-color-circle" style="background:#eadeca;"></div>
+				<div class="dc-color-circle" style="background:#80856d;"></div>
+				<div class="dc-color-circle" style="background:#a5907b;"></div>
+				<div class="dc-color-circle" style="background:#806248;"></div>
+				<div class="dc-color-circle" style="background:#50311d;"></div>
+			</div>
+
+			<h2 class="dc-script-title">Мужчины</h2>
+			<p class="dc-text">Выбирайте костюмы с рубашкой<br>или поло в предложенных оттенках</p>
+			<div class="dc-color-row">
+				<div class="dc-color-circle" style="background:#ffffff;"></div>
+				<div class="dc-color-circle" style="background:#a5907b;"></div>
+				<div class="dc-color-circle" style="background:#806248;"></div>
+				<div class="dc-color-circle" style="background:#50311d;"></div>
+				<div class="dc-color-circle" style="background:#0b090c;"></div>
+			</div>
+			<p class="dc-footer">Мы подобрали немного образов,<br>чтобы вы могли вдохновиться</p>
+		</div>
+		<br>
+		<!-- БЛОК 7. ДРЕСС-КОД -->
+		<div class="slider-container">
+			<div class="slider">
+				<img src="./assets/photo1.png" class="slide active">
+				<img src="./assets/photo2.png" class="slide">
+				<img src="./assets/photo3.png" class="slide">
+				<img src="./assets/photo4.png" class="slide">
+				<img src="./assets/photo5.png" class="slide">
+				<img src="./assets/photo6.png" class="slide">
+				<img src="./assets/photo7.png" class="slide">
+				<img src="./assets/photo8.png" class="slide">
+				<img src="./assets/photo9.png" class="slide">
+				<img src="./assets/photo10.png" class="slide">
+			</div>
+
+			<div class="slider-arrow left" id="arrowPrev">&#10094;</div>
+			<div class="slider-arrow right" id="arrowNext">&#10095;</div>
+		</div>
+		
+		<br>
+		<br>
+		
+		<!-- БЛОК 8. КОНТАКТНАЯ ИНФОРМАЦИЯ -->
+		<div class="card-contact">
+			<div class="main-text">Контактная информация</div>
+			
+			<p class="photo-text white">Ваше присутствие — самый ценный подарок для нас. Если вы захотите порадовать нас дополнительно, мы будем благодарны за вклад в наше будущее в виде денежного подарка.</p>		
+			<p class="photo-text white">Если у вас возникли вопросы или вы готовите творческий подарок, свяжитесь заранее с невестой:</p>
+			
+			<div class="contact-item">
+				<div class="contact-icon">
+					<img src="./assets/phone.png">
+				</div>
+				<p class="photo-text white">+7 (996) 397-58-26</p>
+			</div>
+
+			<div class="contact-item">
+				<div class="contact-icon">
+					<img src="./assets/telegram.png">
+				</div>
+				<p class="photo-text white">
+					<a href="https://t.me/levshitss">levshitss</a>
+				</p>
+			</div>
+			
+			<div class="place-card-mask"></div>
+			
+		</div>
+		
+		<!-- БЛОК 9. ПРИСУТСТВИЕ -->
+		<div class="rsvp-container">
+			<h2 class="dc-script-title rsvp-title">Присутствие</h2>
+			<p class="rsvp-subtitle">
+				Пожалуйста, подтвердите свое<br>
+				присутствие до <span>04.06.2026</span>
+			</p>
+
+			<label class="rsvp-label">Ваше имя и фамилия</label>
+			<input type="text" id="nameField" class="rsvp-input">
+
+			<!-- <hr class="rsvp-line">-->
+
+			<div class="rsvp-block">
+				<p class="rsvp-label">Сможете ли вы присутствовать?</p>
+
+				<label class="rsvp-radio">
+					<input type="radio" name="status" value="Да, буду"><span></span>
+					Да, буду
+				</label>
+
+				<label class="rsvp-radio">
+					<input type="radio" name="status" value="Не смогу присутствовать"><span></span>
+					Не смогу присутствовать
+				</label>
+			</div>
+
+			<div class="rsvp-block">
+				<p class="rsvp-label">Предпочтения по напиткам:</p>
+
+				<label class="rsvp-check"><input type="checkbox" value="Шампанское"><span></span> Шампанское</label>
+				<label class="rsvp-check"><input type="checkbox" value="Вино белое"><span></span> Вино белое</label>
+				<label class="rsvp-check"><input type="checkbox" value="Вино красное"><span></span> Вино красное</label>
+				<label class="rsvp-check"><input type="checkbox" value="Коньяк"><span></span> Коньяк</label>
+				<label class="rsvp-check"><input type="checkbox" value="Безалкогольные напитки"><span></span> Безалкогольные напитки</label>
+			</div>
+			<button class="rsvp-btn" id="sendBtn">Отправить</button>
+		</div>
+		
+		<br>
+		
+		<!-- БЛОК 10. ДО ВСТРЕЧИ ЧЕРЕЗ -->
+		<div class="countdown-wrapper">
+			<div class="photo-text"><h2>До встречи через</h2></div>
+
+			<div class="countdown">
+				<div class="cd-item">
+					<span id="days">0</span>
+					<div class="cd-label">дней</div>
+				</div>
+				<div class="cd-item">
+					<span id="hours">0</span>
+					<div class="cd-label">часов</div>
+				</div>
+				<div class="cd-item">
+					<span id="minutes">0</span>
+					<div class="cd-label">минут</div>
+				</div>
+				<div class="cd-item">
+					<span id="seconds">0</span>
+					<div class="cd-label">секунд</div>
+				</div>
+			</div>
+		</div>
+		
+		<br>
+		<br>
+		
+		<!-- БЛОК 11. С любовью, София и Артём -->
+		<div class="wedding-photo-block2"> <img src="./assets/Фото 3.png" class="wedding-photo2">
+			<div class="photo-title-bottom">
+				<div class="subtitle">С любовью,</div>
+				<div class="names-bottom">Артём и София</div>
+			</div>
+		</div>
+		<br>
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
